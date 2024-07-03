@@ -1,0 +1,609 @@
+Q.1 Using console.log() print out the following statement:
+The quote 'There is no exercise better for the heart than reaching down and lifting people up.
+' by John Holmes teaches us to help one another. Using console.log() print out the following 
+quote by Mother Teresa:
+To print this using console.log():
+console.log("The quote 'There is no exercise better for the heart than reaching 
+down and lifting people up.' by John Holmes teaches us to help one another.");
+console.log("The best way to find yourself is to lose yourself in the service of others. - 
+Mother Teresa");
+=============================================================================================
+Q.2 Check if typeof '10' is exactly equal to 10. If not make it exactly equal?
+First, let's check the typeof '10':
+console.log(typeof '10'); // This will print 'string'
+
+To convert it to a number, use parseInt():
+let num = parseInt('10');
+console.log(num); // This will print 10
+Now, check its type:
+console.log(typeof num); // This will print 'number'
+=============================================================================================
+Q.3 Write a JavaScript Program to find the area of a triangle?
+function triangleArea(base, height) {
+    let area = 0.5 * base * height;
+    return area;
+}
+
+// Example usage:
+let base = 5;
+let height = 8;
+console.log("Area of the triangle:", triangleArea(base, height));
+=============================================================================================
+Q.4 Write a JavaScript program to calculate days left until next Christmas?
+function daysUntilChristmas() {
+    const today = new Date();
+    const christmas = new Date(today.getFullYear(), 11, 25); // 11 is December (months are 0-indexed)
+    if (today.getMonth() === 11 && today.getDate() > 25) {
+        christmas.setFullYear(christmas.getFullYear() + 1);
+    }
+    const oneDay = 1000 * 60 * 60 * 24;
+    const daysLeft = Math.ceil((christmas.getTime() - today.getTime()) / oneDay);
+    return daysLeft;
+}
+
+console.log("Days until Christmas:", daysUntilChristmas());
+=============================================================================================
+Q.5 What is Condition Statement?
+A condition statement in programming (specifically in JavaScript) is a statement that 
+evaluates whether a condition is true or false. It is often used to make decisions in the code, 
+executing different blocks of code based on whether the condition evaluates to true or false.
+=============================================================================================
+Q.6 Find circumference of Rectangle formula: C = 2 * (length + width)?
+It seems like there's a misunderstanding in the formula provided. The circumference is typically 
+used for circles, not rectangles. For a rectangle, the perimeter (which is analogous to 
+circumference for rectangles) formula would be:
+Perimeter = 2 * (length + width)
+=============================================================================================
+Q.7 WAP to convert years into days and days into years?
+// Years to Days
+function yearsToDays(years) {
+    let days = years * 365.25; // Taking leap years into account
+    return days;
+}
+
+// Days to Years
+function daysToYears(days) {
+    let years = days / 365.25;
+    return years;
+}
+
+// Example usage:
+let years = 5;
+console.log(years + " years is approximately " + yearsToDays(years) + " days.");
+let days = 1825; // 5 years worth of days
+console.log(days + " days is approximately " + daysToYears(days) + " years.");
+=============================================================================================
+Q.8 Convert temperature Fahrenheit to Celsius? (Conditional logic Question)
+function fahrenheitToCelsius(fahrenheit) {
+    let celsius = (fahrenheit - 32) * (5 / 9);
+    return celsius;
+}
+
+// Example usage:
+let fahrenheit = 68;
+console.log(fahrenheit + "°F is " + fahrenheitToCelsius(fahrenheit).toFixed(2) + "°C.");
+=============================================================================================
+Q.9 Write a JavaScript exercise to get the extension of a filename?
+function getFileExtension(filename) {
+    return filename.slice(filename.lastIndexOf('.') + 1);
+}
+
+// Example usage:
+let filename = "example.txt";
+console.log("File extension:", getFileExtension(filename)); // Output: txt
+=============================================================================================
+Q.10 What is the result of the expression (5 > 3 && 2 < 4)?
+The expression (5 > 3 && 2 < 4) evaluates to true. This is because both conditions 
+(5 > 3 and 2 < 4) are true, and the && (logical AND) operator returns true only if both 
+conditions are true.
+=============================================================================================
+Q.11 What is the result of the expression (true && 1 && "hello")?
+The expression (true && 1 && "hello") evaluates to "hello". In JavaScript, the && operator 
+returns the last value if all conditions are true. Here, true is true, 1 is considered truthy, 
+and "hello" is also truthy, so the result is "hello".
+=============================================================================================
+Q.12 What is the result of the expression true && false || false && true?
+The expression true && false || false && true evaluates to false. The && operator has higher 
+precedence than ||, so it's evaluated left to right. true && false is false, and false && 
+is also false. Therefore, false || false is false.
+=============================================================================================
+Q.13 Check Number Is Positive or Negative in JavaScript?
+function checkPositiveOrNegative(num) {
+    if (num > 0) {
+        return "Positive";
+    } else if (num < 0) {
+        return "Negative";
+    } else {
+        return "Zero";
+    }
+}
+
+// Example usage:
+console.log(checkPositiveOrNegative(10));  // Output: Positive
+console.log(checkPositiveOrNegative(-5));  // Output: Negative
+console.log(checkPositiveOrNegative(0));   // Output: Zero
+=============================================================================================
+Q.14 Find the Character Is Vowel or Not?
+function isVowel(char) {
+    const vowels = ['a', 'e', 'i', 'o', 'u'];
+    return vowels.includes(char.toLowerCase());
+}
+
+// Example usage:
+console.log(isVowel('a'));  // Output: true
+console.log(isVowel('B'));  // Output: false
+=============================================================================================
+Q.15 Write to check whether a number is negative, positive or zero?
+function checkPositiveOrNegative(num) {
+    if (num > 0) {
+        return "Positive";
+    } else if (num < 0) {
+        return "Negative";
+    } else {
+        return "Zero";
+    }
+}
+
+// Example usage:
+console.log(checkPositiveOrNegative(10));  // Output: Positive
+console.log(checkPositiveOrNegative(-5));  // Output: Negative
+console.log(checkPositiveOrNegative(0));   // Output: Zero
+=============================================================================================
+Q.16 Write to find number is even or odd using ternary operator in JS?
+function evenOrOdd(num) {
+    return num % 2 === 0 ? "Even" : "Odd";
+}
+
+// Example usage:
+console.log(evenOrOdd(5));  // Output: Odd
+console.log(evenOrOdd(10)); // Output: Even
+=============================================================================================
+Q.17 Write find maximum number among 3 numbers using ternary operator in JS?
+function maxOfThree(a, b, c) {
+    return (a > b ? (a > c ? a : c) : (b > c ? b : c));
+}
+
+// Example usage:
+console.log(maxOfThree(5, 2, 8));  // Output: 8
+console.log(maxOfThree(-1, 0, 1)); // Output: 1
+=============================================================================================
+Q.18 Write to find minimum number among 3 numbers using ternary operator in JS?
+=============================================================================================
+Q.19 Write to find the largest of three numbers in JS?
+function maxOfThree(a, b, c) {
+    return (a > b ? (a > c ? a : c) : (b > c ? b : c));
+}
+
+// Example usage:
+console.log(maxOfThree(5, 2, 8));  // Output: 8
+console.log(maxOfThree(-1, 0, 1)); // Output: 1
+Q.20 Write to show:
+i. Monday to Sunday using switch case in JS?
+function getDayName(dayNumber) {
+    switch (dayNumber) {
+        case 0:
+            return "Sunday";
+        case 1:
+            return "Monday";
+        case 2:
+            return "Tuesday";
+        case 3:
+            return "Wednesday";
+        case 4:
+            return "Thursday";
+        case 5:
+            return "Friday";
+        case 6:
+            return "Saturday";
+        default:
+            return "Invalid day number";
+    }
+}
+
+// Example usage:
+console.log(getDayName(1));  // Output: Monday
+console.log(getDayName(5));  // Output: Friday
+console.log(getDayName(7));  // Output: Invalid day number
+
+ii. Vowel or Consonant using switch case in JS?
+function checkVowelOrConsonant(char) {
+    switch (char.toLowerCase()) {
+        case 'a':
+        case 'e':
+        case 'i':
+        case 'o':
+        case 'u':
+            return "Vowel";
+        default:
+            return "Consonant";
+    }
+}
+
+// Example usage:
+console.log(checkVowelOrConsonant('a'));  // Output: Vowel
+console.log(checkVowelOrConsonant('b'));  // Output: Consonant
+
+=============================================================================================
+Q.21 What are the looping structures in JavaScript? Any one Example?
+JavaScript has several looping structures:
+
+for loop: Executes a block of code a specified number of times.
+while loop: Executes a block of code as long as a specified condition is true.
+do...while loop: Similar to while loop, but it executes the block of code once before checking 
+the condition.
+Example of a for loop:
+
+for (let i = 972; i >= 897; i--) {
+    console.log(i);
+}
+=============================================================================================
+Q.22 Write a print 972 to 897 using for loop in JS?
+for (let i = 972; i >= 897; i--) {
+    console.log(i);
+}
+=============================================================================================
+Q.23 Write to print factorial of given number?
+function factorial(num) {
+    if (num === 0 || num === 1) {
+        return 1;
+    } else {
+        let result = 1;
+        for (let i = 2; i <= num; i++) {
+            result *= i;
+        }
+        return result;
+    }
+}
+
+// Example usage:
+let number = 5;
+console.log("Factorial of " + number + " is:", factorial(number)); // Output: 120
+=============================================================================================
+Q.24 Write to print Fibonacci series up to given numbers?
+function fibonacciSeries(count) {
+    let fibArray = [0, 1];
+    for (let i = 2; i < count; i++) {
+        fibArray[i] = fibArray[i - 1] + fibArray[i - 2];
+    }
+    return fibArray;
+}
+
+// Example usage:
+let count = 10;
+console.log("Fibonacci series up to " + count + " numbers:", fibonacciSeries(count));
+// Output: [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
+=============================================================================================
+Q.25 Write to print number in reverse order e.g.: number = 64728 ---> reverse =82746 in JS?
+function reverseNumber(number) {
+    let reversed = 0;
+    while (number > 0) {
+        let digit = number % 10;
+        reversed = reversed * 10 + digit;
+        number = Math.floor(number / 10);
+    }
+    return reversed;
+}
+
+// Example usage:
+let number = 64728;
+console.log("Reverse of " + number + " is:", reverseNumber(number)); // Output: 82746
+=============================================================================================
+Q.26 Write a program make a summation of given number (E.g., 1523 Ans: - 11) in JS?
+function sumOfDigits(number) {
+    let sum = 0;
+    while (number > 0) {
+        sum += number % 10;
+        number = Math.floor(number / 10);
+    }
+    return sum;
+}
+
+// Example usage:
+let number = 1523;
+console.log("Sum of digits of " + number + " is:", sumOfDigits(number)); // Output: 11
+=============================================================================================
+Q.27 Write a program you have to make a summation of first and last Digit. (E.g., 1234 Ans: - 5) 
+in JS?
+function sumFirstAndLastDigit(number) {
+    let lastDigit = number % 10;
+    while (number >= 10) {
+        number = Math.floor(number / 10);
+    }
+    let firstDigit = number;
+    return firstDigit + lastDigit;
+}
+
+// Example usage:
+let number = 1234;
+console.log("Sum of first and last digits of " + number + " is:", sumFirstAndLastDigit(number)); // Output: 5
+=============================================================================================
+Q.28 Use console.log() and escape characters to print the following pattern in JS?
+console.log("1 1 1 1 1");
+console.log("2 1 2 4 8");
+console.log("3 1 3 9 27");
+console.log("4 1 4 16 64");
+console.log("5 1 5 25 125");
+=============================================================================================
+Q.29 Use pattern in console.log in JS?
+for (let i = 1; i <= 5; i++) {
+    let row = "";
+    for (let j = 1; j <= i; j++) {
+        if (j % 2 === 1) {
+            row += "1 ";
+        } else {
+            row += "0 ";
+        }
+    }
+    console.log(row);
+}
+
+let charCode = 65; // ASCII code for 'A'
+for (let i = 1; i <= 5; i++) {
+    let row = "";
+    for (let j = 1; j <= i; j++) {
+        row += String.fromCharCode(charCode) + " ";
+        charCode++;
+    }
+    console.log(row);
+}
+
+let num = 1;
+for (let i = 1; i <= 5; i++) {
+    let row = "";
+    for (let j = 1; j <= i; j++) {
+        row += num + " ";
+        num++;
+    }
+    console.log(row);
+}
+
+for (let i = 1; i <= 5; i++) {
+    let row = "";
+    for (let j = 1; j <= i; j++) {
+        row += "* ";
+    }
+    console.log(row);
+}
+=============================================================================================
+Q.30 Accept 3 numbers from user using while loop and check each number's palindrome
+function isPalindrome(num) {
+    let originalNum = num;
+    let reversed = 0;
+    while (num > 0) {
+        let digit = num % 10;
+        reversed = reversed * 10 + digit;
+        num = Math.floor(num / 10);
+    }
+    return originalNum === reversed;
+}
+
+// Example usage:
+let num1 = 121;
+let num2 = 123;
+let num3 = 1331;
+console.log(num1 + " is palindrome:", isPalindrome(num1)); // true
+console.log(num2 + " is palindrome:", isPalindrome(num2)); // false
+console.log(num3 + " is palindrome:", isPalindrome(num3)); // true
+=============================================================================================
+Q.31 Write a JavaScript Program to display the current day and time in the following format. 
+Sample Output: Today is Friday. Current Time is 12 PM: 12 : 22 2 ?
+
+function getCurrentDateTime() {
+    let today = new Date();
+    let days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+    let day = days[today.getDay()];
+    let hour = today.getHours();
+    let minute = today.getMinutes();
+    let period = hour >= 12 ? "PM" : "AM";
+    hour = hour % 12 || 12; // Convert hour to 12-hour format
+    return `Today is ${day}. Current Time is ${hour} ${period}: ${minute}`;
+}
+
+console.log(getCurrentDateTime());
+=============================================================================================
+Q.32 Write a JavaScript program to get the current date?
+function getCurrentDate() {
+    let today = new Date();
+    let dd = String(today.getDate()).padStart(2, '0');
+    let mm = String(today.getMonth() + 1).padStart(2, '0'); // January is 0!
+    let yyyy = today.getFullYear();
+    return mm + '-' + dd + '-' + yyyy;
+}
+
+console.log("Current date:", getCurrentDate());
+=============================================================================================
+Q.33 Write a JavaScript program to compare two objects?
+function compareObjects(obj1, obj2) {
+    return JSON.stringify(obj1) === JSON.stringify(obj2);
+}
+
+// Example usage:
+let obj1 = { name: "John", age: 30 };
+let obj2 = { age: 30, name: "John" };
+console.log("Objects are equal:", compareObjects(obj1, obj2)); // true
+=============================================================================================
+Q.34 Write a JavaScript program to convert an array of objects into CSV string?
+function arrayToCSV(data) {
+    let csv = "";
+    // Get the headers from the first object
+    let headers = Object.keys(data[0]);
+    csv += headers.join(',') + '\n';
+
+    // Iterate over the array and add rows
+    data.forEach(obj => {
+        let row = headers.map(header => obj[header]);
+        csv += row.join(',') + '\n';
+    });
+
+    return csv;
+}
+
+// Example usage:
+let data = [
+    { name: "John", age: 30, city: "New York" },
+    { name: "Jane", age: 28, city: "Chicago" },
+    { name: "Doe", age: 32, city: "Los Angeles" }
+];
+
+console.log(arrayToCSV(data));
+=============================================================================================
+Q.35 Write a JavaScript program to capitalize first letter of a string?
+function capitalizeFirstLetter(str) {
+    return str.charAt(0).toUpperCase() + str.slice(1);
+}
+
+// Example usage:
+let str = "javascript is awesome";
+console.log("Capitalized:", capitalizeFirstLetter(str)); // Output: "Javascript is awesome"
+=============================================================================================
+Q.45 Write a JavaScript program to determine if a variable is array?
+You can use the Array.isArray() method to check if a variable is an array:
+function isArray(variable) {
+    return Array.isArray(variable);
+}
+
+// Example usage:
+console.log(isArray([1, 2, 3]));  // true
+console.log(isArray("hello"));    // false
+console.log(isArray({}));         // false
+
+function isArray(variable) {
+    return Array.isArray(variable);
+}
+
+// Example usage:
+console.log(isArray([1, 2, 3]));  // true
+console.log(isArray("hello"));    // false
+console.log(isArray({}));         // false
+=============================================================================================
+Q.46 Write a JavaScript program to clone an array?
+You can clone an array using various methods, such as the spread operator (...), Array.slice(), 
+or Array.concat():
+
+Using spread operator:
+function cloneArray(arr) {
+    return [...arr];
+}
+
+// Example usage:
+let originalArray = [1, 2, 3];
+let clonedArray = cloneArray(originalArray);
+console.log("Original:", originalArray);
+console.log("Cloned:", clonedArray);
+
+Using Array.slice():
+
+function cloneArray(arr) {
+    return arr.slice(0);
+}
+
+// Example usage:
+let originalArray = [1, 2, 3];
+let clonedArray = cloneArray(originalArray);
+console.log("Original:", originalArray);
+console.log("Cloned:", clonedArray);
+
+Using Array.concat():
+
+function cloneArray(arr) {
+    return arr.concat();
+}
+
+// Example usage:
+let originalArray = [1, 2, 3];
+let clonedArray = cloneArray(originalArray);
+console.log("Original:", originalArray);
+console.log("Cloned:", clonedArray);
+=============================================================================================
+Q.47 What is the drawback of declaring methods directly in JavaScript objects?
+The main drawback of declaring methods directly in JavaScript objects (also known as defining 
+methods in the object literal) is that each instance of the object will create its own copy of the method. 
+This can lead to inefficient memory usage, especially when multiple instances of the object are created.
+
+For example:
+let person = {
+    name: "John",
+    greet: function() {
+        return "Hello, " + this.name + "!";
+    }
+};
+
+let person1 = Object.create(person);
+person1.name = "Alice";
+
+let person2 = Object.create(person);
+person2.name = "Bob";
+
+console.log(person1.greet());  // Outputs: Hello, Alice!
+console.log(person2.greet());  // Outputs: Hello, Bob!
+
+In the above example, greet() method is duplicated for each instance (person1 and person2), 
+even though the function logic is the same. This can be inefficient for memory usage.
+=============================================================================================
+Q.48 Print the length of the string on the browser console using console.log()?
+You can print the length of a string using console.log() as follows:
+
+let str = "Hello, World!";
+console.log("Length of the string:", str.length);
+=============================================================================================
+Q.49 Change all the string characters to capital letters using toUpperCase() method?
+You can convert all characters of a string to uppercase using the toUpperCase() method:
+
+let str = "hello, world!";
+let uppercaseStr = str.toUpperCase();
+console.log("Uppercase string:", uppercaseStr);
+=============================================================================================
+Q.50 What is the drawback of declaring methods directly in JavaScript objects?
+This question appears to be a duplicate of Q.47. The main drawback is inefficient memory usage 
+due to each instance of the object having its own copy of the method.
+=============================================================================================
+Q.51 Write a JavaScript program to get the current date. Expected Output : mm-ddyyyy, mm/dd/yyyy
+ or dd-mm-yyyy, dd/mm/yyyy?
+You can format the current date in various formats using JavaScript's Date object:
+function getCurrentDate(format) {
+    let today = new Date();
+    let dd = String(today.getDate()).padStart(2, '0');
+    let mm = String(today.getMonth() + 1).padStart(2, '0'); // January is 0!
+    let yyyy = today.getFullYear();
+
+    switch (format) {
+        case "mm-ddyyyy":
+            return mm + '-' + dd + yyyy;
+        case "mm/dd/yyyy":
+            return mm + '/' + dd + '/' + yyyy;
+        case "dd-mm-yyyy":
+            return dd + '-' + mm + '-' + yyyy;
+        case "dd/mm/yyyy":
+            return dd + '/' + mm + '/' + yyyy;
+        default:
+            return "Invalid format";
+    }
+}
+
+// Example usage:
+console.log(getCurrentDate("mm-ddyyyy"));  // Output: 07-03-2024
+console.log(getCurrentDate("mm/dd/yyyy")); // Output: 07/03/2024
+console.log(getCurrentDate("dd-mm-yyyy")); // Output: 03-07-2024
+console.log(getCurrentDate("dd/mm/yyyy")); // Output: 03/07/2024
+
+
+ChatGPT
+Let's tackle each question step by step:
+=============================================================================================
+Q.52 Use indexOf to determine the position of the first occurrence of 'a' in "30 Days Of JavaScript"?
+You can use the indexOf method to find the position of the first occurrence of a character in a string:
+
+let str = "30 Days Of JavaScript";
+let position = str.indexOf('a');
+console.log("Position of 'a':", position); // Output: 4
+
+
+
+
+
+
+
+
+
+
+
